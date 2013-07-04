@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>This Goes There Demo</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/thisgoesthere/thisgoesthere.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	var gamma = new ThisGoesThere('gamma');
+	gamma.append('Gamma Content 1');
+	
+	var beta = new ThisGoesThere('beta');
+	beta.append('Beta HTML Content 1');
+	beta.append(gamma);
+	beta.append('Beta HTML Content 2');
+	
+	var alpha = new ThisGoesThere('alpha');
+	
+	alpha.append('Alpha HTML content 1');
+	alpha.append('Alpha HTML content 2');
+	alpha.append(beta);
+	alpha.append('Alpha HTML content 3');
+	
+	$('#main').html(alpha.print());
+	
+});
+
+</script>
+</head>
+<body>
+<div id="main">
+This goes there demo...
+</div>
+</body>
+</html>
