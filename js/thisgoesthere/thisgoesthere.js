@@ -73,6 +73,8 @@ window.ThisGoesThere = function(name, params){
 					
 					$o = $(o);
 					
+					$o.addClass(settings.name);
+					
 					if(settings.index) $o.addClass(settings.indexPrefix + base);
 					
 					if(settings.zebra){
